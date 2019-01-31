@@ -120,5 +120,22 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static_in_env'),
+]
+
+VENV_PATH = os.path.dirname(BASE_DIR)
+
+STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+
+
+
+SEND_GRID_API_KEY = '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'
+EMAIL_HOST = 'smpt.sendrgrid.net'
+EMAI_HOST_USER = 'Your sendgrid password'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'your sendgrid email'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Contact email recived from website'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
