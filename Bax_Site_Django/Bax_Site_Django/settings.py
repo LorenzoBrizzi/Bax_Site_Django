@@ -130,7 +130,7 @@ STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 
 
 
-SEND_GRID_API_KEY = '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'
+SEND_GRID_API_KEY = ''
 EMAIL_HOST = 'smpt.sendrgrid.net'
 EMAI_HOST_USER = 'Your sendgrid password'
 EMAIL_PORT = '587'
